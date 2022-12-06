@@ -1,3 +1,14 @@
+/* Index styles */
+.index-nav {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+  margin: 10px;
+}
+.index-nav:hover {
+  color: green;
+}
+/*  */
 .nav-link {
   display: block;
   margin-bottom: 10px;
@@ -23,6 +34,7 @@
   display: block;
   margin-top: 10px;
 }
+/* Super Document */
 .magic-list {
   list-style: none;
 }
@@ -40,9 +52,19 @@
 .magic-list__link--current {
   color: tomato;
 }
-
-.color-picker{
+/* Collections */
+.color-picker {
   margin-top: 20px;
   display: flex;
   gap: 20px;
 }
+.buttons-item {
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Product collection */

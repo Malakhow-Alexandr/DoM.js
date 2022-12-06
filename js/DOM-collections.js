@@ -24,34 +24,64 @@ const colorPickerOptions = [
     color: "#3F51B5",
   },
 ];
-// const option = colorPickerOptions[0];
-
-// const buttonEl = document.createElement("button");
-// buttonEl.type = "button";
-// buttonEl.textContent = option.lable;
-// buttonEl.style.backgroundColor = option.color;
-// buttonEl.style.width = 100;
-// buttonEl.style.height = 50;
-// console.log(buttonEl);
 
 // Создание Массива кнопок старым способом
 
-const elements = [];
+// const elements = [];
 
-for (let i = 0; i < colorPickerOptions.length; i += 1) {
-  const option = colorPickerOptions[i];
+// for (let i = 0; i < colorPickerOptions.length; i += 1) {
+//   const option = colorPickerOptions[i];
 
-  const buttonEl = document.createElement("button");
+//   const buttonEl = document.createElement("button");
 
-  buttonEl.type = "button";
-  buttonEl.textContent = option.lable;
-  buttonEl.style.backgroundColor = option.color;
+//   buttonEl.type = "button";
+//   buttonEl.textContent = option.lable;
+//   buttonEl.style.backgroundColor = option.color;
+//   buttonEl.classList.add("buttons-item");
 
-  elements.push(buttonEl);
-}
+//   elements.push(buttonEl);
+// }
 
-console.log(elements);
+// console.log(elements);
 
+// const colorPickerContainerElement = document.querySelector(".js-color-picker");
+
+// colorPickerContainerElement.append(...elements);
+
+// Создание массива кнопок Новым способом
+
+// const elements = colorPickerOptions.map(({ lable, color }) => {
+//   const buttonEl = document.createElement("button");
+//   buttonEl.type = "button";
+//   buttonEl.textContent = lable;
+//   buttonEl.style.backgroundColor = color;
+//   buttonEl.classList.add("buttons-item");
+
+//   return buttonEl;
+// });
+
+// const colorPickerContainerElement = document.querySelector(".js-color-picker");
+
+// colorPickerContainerElement.append(...elements);
+
+// Функция для создания разметки Колорпикера
+
+const magicBtn = document.querySelector(".magic-btn");
+
+const makeColorPickerOptions = (options) => {
+  return options.map(({ lable, color }) => {
+    const buttonEl = document.createElement("button");
+    buttonEl.type = "button";
+    buttonEl.textContent = lable;
+    buttonEl.style.backgroundColor = color;
+    buttonEl.classList.add("buttons-item");
+
+    return buttonEl;
+  });
+};
+const elements = makeColorPickerOptions(colorPickerOptions);
 const colorPickerContainerElement = document.querySelector(".js-color-picker");
 
-colorPickerContainerElement.append(...elements);
+magicBtn.addEventListener("click", () => {
+  colorPickerContainerElement.append(...elements);
+});

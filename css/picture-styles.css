@@ -14,3 +14,13 @@
 .pic-mag-btn:hover {
   background-color: tomato;
 }
+
+.nav-link {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: currentColor;
+}
+.nav-link:hover {
+  color: green;
+}
