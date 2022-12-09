@@ -67,4 +67,28 @@
   cursor: pointer;
 }
 
-/* Product collection */
+/* Keybord event */
+
+.output {
+  font-size: 24px;
+}
+/* Mouse event */
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: teal;
+}
+.box--active{
+  background-color: blue;
+}
+
+.inner-box{
+  width: 70px;
+  height: 70px;
+  background-color: orange;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
